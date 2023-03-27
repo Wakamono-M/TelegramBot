@@ -18,9 +18,7 @@ async def send_welcome(message: types.Message):
     """
     This handler will be called when user sends `/start` or `/help` command
     """
-    await message.reply("@Miky667_bot \n")
-    await message.reply("https://t.me/woBotu\n")
-    await message.reply("Привіт\n")
+    await message.reply("Привіт\nТримай інші посилання:\n@Miky667_bot\nhttps://t.me/woBotu\n")
 
 @dp.message_handler()
 async def send_iii(message: types.Message):
@@ -48,9 +46,6 @@ async def send_iii(message: types.Message):
     elif message.text == 'хто твій помічник?':
         await message.answer('https://t.me/Miky667_bot')
 
-
-
-
     elif message.text == 'твій тг канал': #где будут показываться новоллы и новые тг боты(подпишись)
         await message.answer('https://t.me/woBotu')
     elif message.text == 'твій тг канал?': #где будут показываться новоллы и новые тг боты(подпишись)
@@ -62,13 +57,6 @@ async def send_iii(message: types.Message):
     elif message.text == 'https://t.me/woBotu': #подпишись 
         await message.answer('це мій тг канал')
         await message.answer('подпишись)')
-    
-    
-    
-    
-    
-    
-
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
